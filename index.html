@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HACKED BY RIZKYK KUR</title>
+    <title>HACKED BY RIZKY KUR</title>
     <style>
         * {
             margin: 0;
@@ -64,9 +64,8 @@
 </head>
 <body>
     <div class="video-container">
-        <!-- Video akan memiliki suara dan autoplay -->
-        <video id="background-video" loop>
-            <source src="frog.mp4" type="video/mp4">
+        <video autoplay muted loop>
+            <source src="your-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="overlay">
@@ -76,27 +75,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Mengakses elemen video
-        const video = document.getElementById('background-video');
-
-        // Event listener untuk memastikan video diputar setelah interaksi
-        document.addEventListener('click', () => {
-            if (video.paused) {
-                video.play().catch(error => {
-                    console.error('Gagal memutar video:', error);
-                });
-            }
-        });
-
-        // Otomatis menghapus mute jika autoplay diizinkan
-        video.muted = false;
-
-        // Memulai pemutaran video jika memungkinkan
-        video.play().catch(() => {
-            console.log('Autoplay diblokir oleh browser, klik halaman untuk memutar.');
-        });
-    </script>
 </body>
 </html>
